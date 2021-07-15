@@ -10,14 +10,15 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Course { 
+public class CourseEntity { 
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	public Long id;
+	@GeneratedValue
+	private long id;
 
 	@Column
-	public String name;
+	private String name;
 
-
+	@Column
+	private String teacher;
 }

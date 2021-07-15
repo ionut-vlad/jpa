@@ -28,6 +28,10 @@ public class Book {
 
 	@Column
 	public String title;
+
+	@Column
+	public String gendre;
+	    
 	
 	//ONE TO MANY
 	@OneToMany(cascade = CascadeType.ALL, 
