@@ -28,6 +28,7 @@ public class JpaApplication {
 		hibernateUtil.insertNewCourse();
 		hibernateUtil.insertNewStudent();
 		hibernateUtil.insertAnimals();
+		
 
 	}
 	
