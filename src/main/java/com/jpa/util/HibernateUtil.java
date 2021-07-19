@@ -17,6 +17,7 @@ import com.jpa.entity.university.Book;
 import com.jpa.entity.university.BookDetails;
 import com.jpa.entity.university.BookId;
 import com.jpa.entity.university.CourseEntity;
+import com.jpa.entity.university.FilmEntity;
 import com.jpa.entity.university.GenderEnum;
 import com.jpa.entity.university.Student;
 
@@ -86,7 +87,32 @@ public class HibernateUtil {
         em.getTransaction().commit();
         log.info("insertBook end");		
     }
+    
+    public void insertNewFilm() {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
 
+        FilmEntity film = new FilmEntity().setName("Colombiana");
+
+        em.persist(film);
+
+        FilmEntity film2 = new FilmEntity().setName("Anna");
+
+        em.persist(film2);
+        
+        FilmEntity film3 = new FilmEntity().setName("The Equalizer").setDirector("Antoine Fuqua");
+
+        em.persist(film3);
+        
+        FilmEntity film4 = new FilmEntity().setName("Papillon").setDirector("Michael");
+
+        em.persist(film4);
+
+        em.getTransaction().commit();
+        log.info("insertNewFilm end");		
+    }
+
+    
 
 
 }
